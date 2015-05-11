@@ -1,0 +1,16 @@
+---
+- include_vars: "{{ nvm_env }}.yml"
+
+- include: "{{ nvm_env }}/install.yml"
+
+- name: add nvm initialization to profile
+  template: >
+    src=nvm.sh.j2
+    dest=/etc/profile.d/nvm.sh
+    owner=root
+    group=root
+    mode=0755
+  sudo: true
+
+- include: "{{ nvm_env }}/install_versions.yml"
+- include: "{{ nvm_env }}/install_packages.yml"
