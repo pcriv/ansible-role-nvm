@@ -24,9 +24,9 @@ nvm_node_versions:
 
 # List of defaults gem to install on each nodejs version.
 nmv_packages:
-  - bundler
-  - pry
-  - rubocop
+  - bower
+  - jslint
+  - coffeescript
 
 # List of users to install nvm and nodejs versions to.
 # Ignored if nmv_env is set to 'system'
