@@ -1,0 +1,7 @@
+---
+- name: install versions
+  shell: bash -lc "nvm install {{ item }}"
+  with_items: nvm_node_versions
+
+- name: set {{ nvm_default_node_version }} as default version
+  shell: bash -lc "nvm alias default {{ nvm_default_node_version }}"

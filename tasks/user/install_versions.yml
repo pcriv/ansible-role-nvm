@@ -1,0 +1,14 @@
+---
+- name: install versions for each user
+  shell: bash -lc "nvm install {{ item.1 }}"
+  sudo: true
+  sudo_user: "{{ item.0 }}"
+  with_nested:
+    - nvm_users
+    - nvm_node_versions
+
+- name: set {{ nvm_default_node_version }} as default version for each user
+  shell: bash -lc "nvm alias default {{ nvm_default_node_version }}"
+  sudo: true
+  sudo_user: "{{ item }}"
+  with_items: nvm_users
