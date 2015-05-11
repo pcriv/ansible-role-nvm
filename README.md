@@ -26,7 +26,7 @@ nvm_node_versions:
 nmv_packages:
   - bower
   - jslint
-  - coffeescript
+  - coffee-script
 
 # List of users to install nvm and nodejs versions to.
 # Ignored if nmv_env is set to 'system'
