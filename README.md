@@ -11,9 +11,9 @@ Tested with Ansible 1.8.4.
 ```yaml
 ---
 # This could be set to 'user' to support user installs.
-nmv_env: system
+nvm_env: system
 
-nmv_version: v0.4.0
+nvm_version: v0.4.0
 
 # This sets the nvm global nodejs version.
 nvm_default_node_version: stable
@@ -23,14 +23,14 @@ nvm_node_versions:
   - stable
 
 # List of defaults gem to install on each nodejs version.
-nmv_packages:
+nvm_packages:
   - bower
   - jslint
   - coffee-script
 
 # List of users to install nvm and nodejs versions to.
-# Ignored if nmv_env is set to 'system'
-nmv_users: []
+# Ignored if nvm_env is set to 'system'
+nvm_users: []
 ```
 
 ## Dependencies
