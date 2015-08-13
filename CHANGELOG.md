@@ -1,3 +1,10 @@
+## 1.0.2
+
+BUG FIXES
+
+- Fix broken dynamic includes
+- Update README to reference correct vars.
+
 ## 1.0.1
 
 BUG FIXES
