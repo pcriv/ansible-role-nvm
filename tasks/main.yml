@@ -1,7 +1,12 @@
 ---
+
 - include_vars: "{{ nvm_env }}.yml"
 
-- include: "{{ nvm_env }}/install.yml"
+- include: "system/install.yml"
+  when: "nvm_env == 'system'"
+
+- include: "user/install.yml"
+  when:  "nvm_env == 'user'"
 
 - name: add nvm initialization to profile
   template: >
@@ -12,5 +17,14 @@
     mode=0755
   sudo: true
 
-- include: "{{ nvm_env }}/install_versions.yml"
-- include: "{{ nvm_env }}/install_packages.yml"
+- include: "system/{{ item }}.yml"
+  with:
+    - "install_versions"
+    - "install_packages"
+  when: "nvm_env == 'system'"
+
+- include: "user/{{ item }}.yml"
+  with:
+    - "install_versions"
+    - "install_packages"
+  when: "nvm_env == 'user'"
