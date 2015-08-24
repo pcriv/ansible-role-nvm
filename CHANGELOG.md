@@ -1,8 +1,17 @@
+## 1.0.3
+
+BUG FIXES
+
+- Fix more broken dynamic includes.
+- Manage 'changed' status correctly when installing node versions.
+- Add vagrant vm for testing.
+- Add Travis CI Support.
+
 ## 1.0.2
 
 BUG FIXES
 
-- Fix broken dynamic includes
+- Fix broken dynamic includes.
 - Update README to reference correct vars.
 
 ## 1.0.1

@@ -1,6 +1,8 @@
 ---
 - name: install versions
   shell: bash -lc "nvm install {{ item }}"
+  register: output
+  changed_when: "'already installed.' not in output.stderr"
   with_items: nvm_node_versions
 
 - name: set {{ nvm_default_node_version }} as default version
