@@ -14,6 +14,9 @@ Vagrant.configure('2') do |config|
       ansible.inventory_path = 'vagrant-inventory'
       ansible.host_key_checking = false
       ansible.verbose = 'vvv'
+      ansible.extra_vars = {
+        nvm_env: ENV['NVM_ENV']
+      }
     end
   end
 end
