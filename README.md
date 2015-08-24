@@ -1,5 +1,10 @@
 # Ansible Role: NVM
 
+[![Build
+Status](http://img.shields.io/travis/pablocrivella/ansible-role-nvm.svg?style=flat)](http://travis-ci.org/pablocrivella/ansible-role-nvm)
+[![Ansible
+Galaxy](http://img.shields.io/badge/galaxy-pablocrivella.nvm-660198.svg?style=flat)](https://galaxy.ansible.com/list#/roles/3745)
+
 Role to install nvm and multiple nodejs versions.
 
 ## Requirements
