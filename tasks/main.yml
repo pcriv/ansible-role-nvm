@@ -17,14 +17,14 @@
     mode=0755
   sudo: true
 
-- include: "system/{{ item }}.yml"
-  with:
-    - "install_versions"
-    - "install_packages"
+- include: "system/install_versions.yml"
   when: "nvm_env == 'system'"
 
-- include: "user/{{ item }}.yml"
-  with:
-    - "install_versions"
-    - "install_packages"
+- include: "system/install_packages.yml"
+  when: "nvm_env == 'system'"
+
+- include: "user/install_versions.yml"
+  when: "nvm_env == 'user'"
+
+- include: "user/install_packages.yml"
   when: "nvm_env == 'user'"
