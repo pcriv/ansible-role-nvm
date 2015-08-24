@@ -6,6 +6,8 @@
   with_nested:
     - nvm_users
     - nvm_node_versions
+  register: output
+  changed_when: "'already installed.' not in output.stderr"
 
 - name: set {{ nvm_default_node_version }} as default version for each user
   shell: bash -lc "nvm alias default {{ nvm_default_node_version }}"
