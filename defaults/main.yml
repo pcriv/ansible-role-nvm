@@ -7,3 +7,4 @@ nvm_node_versions:
   - stable
 
 nvm_global_packages: []
+nvm_users: []
