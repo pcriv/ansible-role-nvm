@@ -15,7 +15,8 @@ Vagrant.configure('2') do |config|
       ansible.host_key_checking = false
       ansible.verbose = 'vvv'
       ansible.extra_vars = {
-        nvm_env: ENV['NVM_ENV']
+        nvm_env: ENV['NVM_ENV'],
+        nvm_users: ['vagrant']
       }
     end
   end
