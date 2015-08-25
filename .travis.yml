@@ -7,7 +7,6 @@ env:
   - NVM_ENV=user
 
 before_install:
-  - sudo useradd -m vagrant
   - sudo apt-get update -qq
   - sudo apt-get install -qq git
 install:
