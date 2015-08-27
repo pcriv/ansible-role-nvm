@@ -1,3 +1,5 @@
+nvm_env = ENV.key?('NVM_ENV') ? ENV['NVM_ENV'] : 'system'
+
 Vagrant.configure('2') do |config|
   config.vm.define 'ansible-role-nvm' do |c|
     c.vm.box = 'ubuntu/trusty64'
@@ -13,9 +15,9 @@ Vagrant.configure('2') do |config|
       ansible.sudo = true
       ansible.inventory_path = 'vagrant-inventory'
       ansible.host_key_checking = false
-      ansible.verbose = 'vvv'
+      ansible.verbose = 'v'
       ansible.extra_vars = {
-        nvm_env: ENV['NVM_ENV'],
+        nvm_env: nvm_env,
         nvm_users: ['vagrant']
       }
     end
