@@ -11,7 +11,10 @@
 
 - name: create alias directory for each user
   file: path= "{{ nvm_root }}/alias" state=directory
-
+  sudo: true
+  sudo_user: "{{ item }}"
+  with_items: nvm_users
+  
 - name: set {{ nvm_default_node_version }} as default version for each user
   copy: dest="{{ nvm_root }}/alias/default" content="{{ nvm_default_node_version }}"
   sudo: true
