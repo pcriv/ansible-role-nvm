@@ -9,6 +9,9 @@
   register: output
   changed_when: "'already installed.' not in output.stderr"
 
+- name: create alias directory for each user
+  file: path= "{{ nvm_root }}/alias" state=directory
+
 - name: set {{ nvm_default_node_version }} as default version for each user
   copy: dest="{{ nvm_root }}/alias/default" content="{{ nvm_default_node_version }}"
   sudo: true
