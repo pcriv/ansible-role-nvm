@@ -1,3 +1,9 @@
+## 1.0.4
+
+IMPROVEMENTS
+
+- Idempotent default alias
+
 ## 1.0.3
 
 BUG FIXES

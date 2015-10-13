@@ -60,3 +60,4 @@ Pablo Crivella Backend Engineer @ NobelBiz.
 ## Contributors
 
 - [David Farrington](https://github.com/farridav)
+- [Lorenz Bischof](https://github.com/Lorenzbi)
