@@ -9,7 +9,7 @@ Role to install nvm and multiple nodejs versions.
 
 ## Requirements
 
-Tested with Ansible 1.8.4.
+Tested with Ansible 2.0.0.2.
 
 ## Role Variables
 

@@ -15,7 +15,7 @@
     owner=root
     group=root
     mode=0755
-  sudo: true
+  become: true
 
 - include: "system/install_versions.yml"
   when: "nvm_env == 'system'"

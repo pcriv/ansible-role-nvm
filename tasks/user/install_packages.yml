@@ -1,8 +1,8 @@
 ---
 - name: install packages for each user
   shell: bash -lc "nvm use {{ item.1 }} && npm install -g {{ item.2 }}"
-  sudo: true
-  sudo_user: "{{ item.0 }}"
+  become: true
+  become_user: "{{ item.0 }}"
   with_nested:
     - nvm_users
     - nvm_node_versions
