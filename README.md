@@ -27,8 +27,8 @@ nvm_default_node_version: stable
 nvm_node_versions:
   - stable
 
-# List of defaults gem to install on each nodejs version.
-nvm_packages: []
+# List of default packages to install on each nodejs version.
+nvm_global_packages: []
 
 # List of users to install nvm and nodejs versions to.
 # Ignored if nvm_env is set to 'system'
