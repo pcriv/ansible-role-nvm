@@ -3,7 +3,7 @@
   shell: bash -lc "nvm install {{ item }}"
   register: output
   changed_when: "'already installed.' not in output.stderr"
-  with_items: nvm_node_versions
+  with_items: "{{ nvm_node_versions }}"
 
 - name: create alias directory
   file: path="{{ nvm_root }}/alias" state=directory
