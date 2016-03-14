@@ -4,6 +4,6 @@
   become: true
   become_user: "{{ item.0 }}"
   with_nested:
-    - nvm_users
-    - nvm_node_versions
-    - nvm_global_packages
+    - "{{ nvm_users }}"
+    - "{{ nvm_node_versions }}"
+    - "{{ nvm_global_packages }}"

@@ -13,7 +13,7 @@
   file: path="{{ nvm_root }}/alias" state=directory
   become: true
   become_user: "{{ item }}"
-  with_items: nvm_users
+  with_items: "{{ nvm_users }}"
 
 - name: set {{ nvm_default_node_version }} as default version for each user
   copy: dest="{{ nvm_root }}/alias/default" content="{{ nvm_default_node_version }}"
