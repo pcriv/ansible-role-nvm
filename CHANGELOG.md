@@ -1,3 +1,10 @@
+## 2.0.1
+
+BREAKING CHANGES:
+
+- Remove deprecations
+- Update nvm version
+
 ## 2.0.0
 
 BREAKING CHANGES:
