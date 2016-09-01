@@ -5,6 +5,6 @@
     dest={{ nvm_root }}
     version={{ nvm_version }}
     accept_hostkey=true
-  with_items: nvm_users
+  with_items: "{{ nvm_users }}"
   become: true
   become_user: "{{ item }}"

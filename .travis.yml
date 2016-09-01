@@ -10,7 +10,7 @@ before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq git
 install:
-  - pip install ansible==2.0.0.2
+  - pip install ansible==2.1.1.0
 script:
   - echo localhost > inventory
   - ansible-playbook -i inventory test.yml --syntax-check
@@ -19,8 +19,3 @@ script:
     -e "nvm_env=$NVM_ENV"
     -e "nvm_root=/tmp/.nvm"
     -e "nvm_users=['travis']"
-  # - >
-  #   ansible-playbook -i inventory test.yml --connection=local --sudo -e "nvm_env=$NVM_ENV"
-  #   | grep -q 'changed=0.*failed=0'
-  #   && (echo 'Idempotence test: pass' && exit 0)
-  #   || (echo 'Idempotence test: fail' && exit 1)

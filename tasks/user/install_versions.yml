@@ -4,8 +4,8 @@
   become: true
   become_user: "{{ item.0 }}"
   with_nested:
-    - nvm_users
-    - nvm_node_versions
+    - "{{ nvm_users }}"
+    - "{{ nvm_node_versions }}"
   register: output
   changed_when: "'already installed.' not in output.stderr"
 
@@ -19,4 +19,4 @@
   copy: dest="{{ nvm_root }}/alias/default" content="{{ nvm_default_node_version }}"
   become: true
   become_user: "{{ item }}"
-  with_items: nvm_users
+  with_items: "{{ nvm_users }}"
