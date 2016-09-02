@@ -1,6 +1,6 @@
 ---
 nvm_env: system
-nvm_version: v0.26.0
+nvm_version: v0.31.6
 nvm_default_node_version: stable
 
 nvm_node_versions:
