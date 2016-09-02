@@ -18,7 +18,7 @@ Tested with Ansible 2.0.0.2.
 # This could be set to 'user' to support user installs.
 nvm_env: system
 
-nvm_version: v0.26.0
+nvm_version: v0.31.6
 
 # This sets the nvm global nodejs version.
 nvm_default_node_version: stable
@@ -42,7 +42,7 @@ nvm_users: []
 ## Example Playbook
 
 ```yaml
-- hosts: js-devbox
+- hosts: js
   roles:
     - pablocrivella.nvm
 ```
@@ -55,7 +55,7 @@ MIT
 
 ## Author Information
 
-Pablo Crivella Backend Engineer @ NobelBiz.
+Pablo Crivella.
 
 ## Contributors
 
