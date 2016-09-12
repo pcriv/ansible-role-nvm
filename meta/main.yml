@@ -11,5 +11,3 @@ galaxy_info:
   categories:
     - development
     - system
-dependencies:
-  - role: ANXS.git
