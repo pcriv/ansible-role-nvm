@@ -1,2 +1,2 @@
 ---
-nvm_root: "~/.nvm"
+nvm_root: "$HOME/.nvm"
